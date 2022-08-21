@@ -1,15 +1,16 @@
+
 .container{
     width:100wh;
     height:100vh;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 .second_container{
     margin-left: 1px;
     display:flex;
     width:99.5%;
-    height:80%;
-    border:1px solid blue;
+    height:90%;
+    /* border:1px solid blue; */
 }
 
 .sidebaricons{
@@ -31,7 +32,7 @@
     background-color: khaki;
     display:flex;
     height:45%;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 .song_info h5 {
@@ -78,7 +79,34 @@ td, th {
   }
 
 .footer{
-    width:99.5%;
-    height:19.3%;
-    border:1px solid green;
+    width:100%;
+    height:10%;
+    background-color: skyblue;
+    display: flex;
+}
+
+.playlistrunning img{
+    padding: 3px;
+}
+
+.song_name{
+    width:40%;
+    padding: 1px;
+}
+.song_name h6{
+    margin:0px;
+    padding:3px;
+}
+
+.music_button_system{
+    /* display: flex; */
+    width:40%;
+    margin-bottom: 3px;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+#iconsspace{
+    padding: 10px;
+    size:2px;
 }
