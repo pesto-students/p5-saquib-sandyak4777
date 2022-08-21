@@ -50,6 +50,10 @@
     display: flex;
     justify-content: space-around;
 }
+/* .song_icons i{
+    padding: 5px;
+    font-weight: 10;
+} */
 
 .imagecontainer{
     /* margin-top: 10px;
