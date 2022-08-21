@@ -12,6 +12,14 @@
     border:1px solid blue;
 }
 
+.sidebaricons{
+    display: flex;
+    width:20px;
+    height:80%;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
 .footer{
     width:99.5%;
     height:19.3%;
