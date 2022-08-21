@@ -3,3 +3,11 @@
     height:100vh;
     border:1px solid black;
 }
+
+.second_container{
+    margin-left: 1px;
+    display:flex;
+    width:99.5%;
+    height:80%;
+    border:1px solid blue;
+}
