@@ -13,12 +13,69 @@
 }
 
 .sidebaricons{
+    /* margin-top: 15px; */
     display: flex;
     width:20px;
-    height:80%;
+    height:100%;
     flex-direction: column;
     justify-content:space-around;
+    background-color: rgba(31, 170, 31, 0.788);
 }
+
+.song{
+    /* margin-left: 10px; */
+    width:100%;
+}
+
+.current_song_content{
+    background-color: khaki;
+    display:flex;
+    height:45%;
+    border:1px solid black;
+}
+
+.song_info h5 {
+    margin:3px 0 0 6px;
+    padding: 10px;;
+}
+
+.song_info h6{
+    margin:0 0 0 6px;
+    padding: 10px;;
+}
+
+.song_icons{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagecontainer{
+    /* margin-top: 10px;
+    margin-left:20px; */
+    padding:20px;
+}
+
+.playlist_body{
+    height:45%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
 .footer{
     width:99.5%;
