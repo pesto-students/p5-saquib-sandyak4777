@@ -15,15 +15,21 @@ class MyPromise{
             this.#onFail(e)
         }
     }
+
+    #runCallBacks(){
+    }
+
     #onSuccess(value){
         if(this.#state !== STATE.PENDING) return
         this.#value=value;
         this.#state=STATE.FULFILLED
+        this.#runCallBacks()
     }
     #onFail(value){
         if(this.#state !== STATE.PENDING) return
         this.#value=value;
         this.#state=STATE.REJECTED
+        this.#runCallBacks()
     }
 
     then(callbackCode){
