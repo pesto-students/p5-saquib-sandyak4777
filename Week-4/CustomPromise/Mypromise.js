@@ -24,7 +24,9 @@ class MyPromise{
             })
         }
         if(this.#state === STATE.REJECTED){
-
+            this.#catchCallBacks.forEach((callback)=>{
+                callback(this.#value)
+            })
         }
     }
 
