@@ -124,17 +124,3 @@ class MyPromise{
 
 
 module.exports= MyPromise
-
-
-
-const p = new Promise();
-
-p.then(()=>{
-
-}).catch(()=>{
-
-})
-
-p.then(()=>{
-
-},()=>{})
