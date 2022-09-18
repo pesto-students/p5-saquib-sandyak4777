@@ -3,7 +3,7 @@ class MyPromise{
         try{
             callbackCode(this.#onSuccess, this.#onFail)
         }catch(err){
-            this.onFail(e)
+            this.#onFail(e)
         }
     }
     #onSuccess(value){
