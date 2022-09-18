@@ -5,7 +5,8 @@ const STATE = {
   }
 
 class MyPromise{
-    #thenCallBacks= []
+    #thenCallBacks= [];
+    #catchCallBacks=[];
     #state= STATE.PENDING;
     #value 
     constructor(callbackCode){
@@ -17,6 +18,12 @@ class MyPromise{
     }
 
     #runCallBacks(){
+        if(this.#state === STATE.FULFILLED){
+
+        }
+        if(this.#state === STATE.REJECTED){
+
+        }
     }
 
     #onSuccess(value){
