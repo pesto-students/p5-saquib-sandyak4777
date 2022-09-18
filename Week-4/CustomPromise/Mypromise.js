@@ -1,15 +1,15 @@
 class MyPromise{
     constructor(callbackCode){
         try{
-            callbackCode(this.onSuccess, this.onFail)
+            callbackCode(this.#onSuccess, this.#onFail)
         }catch(err){
             this.onFail(e)
         }
     }
-    onSuccess(value){
+    #onSuccess(value){
 
     }
-    onFail(value){
+    #onFail(value){
 
     }
 }
