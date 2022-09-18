@@ -45,8 +45,10 @@ class MyPromise{
         this.#runCallBacks()
     }
 
-    then(callbackCode){
-        this.#thenCallBacks.push(callbackCode)
+    then(thenCallBack,catchCallBack){
+        if(thenCallBack !== null) this.#thenCallBacks.push(this.#thenCallBack) ;
+        if(catchCallBack !== null) this.#catchCallBacks.push(this.#catchCallBack) 
+        // this.#thenCallBacks.push(callbackCode)
 
         this.#runCallBacks()
     }
@@ -54,7 +56,7 @@ class MyPromise{
 
     }
     finally(callbackCode){
-        
+
     }
 }
 
@@ -70,3 +72,7 @@ p.then(()=>{
 }).catch(()=>{
 
 })
+
+p.then(()=>{
+
+},()=>{})
