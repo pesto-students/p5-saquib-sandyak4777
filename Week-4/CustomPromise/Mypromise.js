@@ -96,10 +96,17 @@ class MyPromise{
         // this.#runCallBacks()
     }
     catch(callbackCode){
-        this.then(undefined,callbackCode)
+      return  this.then(undefined,callbackCode)
     }
     finally(callbackCode){
-
+        return this.then(result=>{
+            callbackCode()
+            return result
+        },result=>{
+            callbackCode()
+            throw result
+        }
+        )
     }
 }
 
