@@ -1,3 +1,9 @@
+const STATE = {
+    PENDING: 'PENDING',
+    FULFILLED: 'FULFILLED',
+    REJECTED: 'REJECTED',
+  }
+
 class MyPromise{
     #thenCallBacks= []
     constructor(callbackCode){
