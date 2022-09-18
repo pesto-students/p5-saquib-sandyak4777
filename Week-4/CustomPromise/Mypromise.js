@@ -36,12 +36,23 @@ class MyPromise{
 
     #onSuccess(value){
         if(this.#state !== STATE.PENDING) return
+
+        if(value instanceof MyPromise){
+            value.then(this.#onSuccessBind,this.#onFailBind)
+            return
+        }
         this.#value=value;
         this.#state=STATE.FULFILLED
         this.#runCallBacks()
     }
     #onFail(value){
         if(this.#state !== STATE.PENDING) return
+
+        if(value instanceof MyPromise){
+            value.then(this.#onSuccessBind,this.#onFailBind)
+            return
+        }
+        
         this.#value=value;
         this.#state=STATE.REJECTED
         this.#runCallBacks()
@@ -71,13 +82,14 @@ class MyPromise{
                     reject(err)
                 }
             }) 
+            this.#runCallBacks()
         })
         // if(thenCallBack !== null) this.#thenCallBacks.push(this.#thenCallBack) ;
         // if(catchCallBack !== null) this.#catchCallBacks.push(this.#catchCallBack) 
         // this.#thenCallBacks.push(callbackCode)
 
         
-        this.#runCallBacks()
+        // this.#runCallBacks()
     }
     catch(callbackCode){
         this.then(undefined,callbackCode)
