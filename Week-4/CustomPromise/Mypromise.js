@@ -19,7 +19,9 @@ class MyPromise{
 
     #runCallBacks(){
         if(this.#state === STATE.FULFILLED){
-
+            this.#thenCallBacks.forEach((callback)=>{
+                callback(this.#value)
+            })
         }
         if(this.#state === STATE.REJECTED){
 
