@@ -48,10 +48,35 @@ class MyPromise{
     }
 
     then(thenCallBack,catchCallBack){
-        if(thenCallBack !== null) this.#thenCallBacks.push(this.#thenCallBack) ;
-        if(catchCallBack !== null) this.#catchCallBacks.push(this.#catchCallBack) 
+        return new MyPromise((resolve, reject)=>{
+            this.#thenCallBacks.push(result=>{
+                if(thenCallBack == null){
+                    resolve(result)
+                    return 
+                }
+                try{
+                    resolve(thenCallBack(result))
+                }catch(err){
+                    reject(err)
+                }
+            })
+            this.#catchCallBacks.push(result=>{
+                if(catchCallBack == null){
+                    reject(result)
+                    return 
+                }
+                try{
+                    resolve(thenCallBack(result))
+                }catch(err){
+                    reject(err)
+                }
+            }) 
+        })
+        // if(thenCallBack !== null) this.#thenCallBacks.push(this.#thenCallBack) ;
+        // if(catchCallBack !== null) this.#catchCallBacks.push(this.#catchCallBack) 
         // this.#thenCallBacks.push(callbackCode)
 
+        
         this.#runCallBacks()
     }
     catch(callbackCode){
