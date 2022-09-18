@@ -6,6 +6,7 @@ const STATE = {
 
 class MyPromise{
     #thenCallBacks= []
+    #state= STATE.PENDING;
     constructor(callbackCode){
         try{
             callbackCode(this.#onSuccess, this.#onFail)
@@ -14,10 +15,12 @@ class MyPromise{
         }
     }
     #onSuccess(value){
-
+        this.#value=value;
+        this.#state=STATE.FULFILLED
     }
     #onFail(value){
-
+        this.#value=value;
+        this.#state=STATE.REJECTED
     }
 
     then(callbackCode){
