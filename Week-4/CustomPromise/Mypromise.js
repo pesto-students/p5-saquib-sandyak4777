@@ -9,9 +9,11 @@ class MyPromise{
     #catchCallBacks=[];
     #state= STATE.PENDING;
     #value 
+    #onSuccessBind = this.#onSuccess.bind(this)
+    #onFailBind = this.#onFail.bind(this)
     constructor(callbackCode){
         try{
-            callbackCode(this.#onSuccess, this.#onFail)
+            callbackCode(this.#onSuccessBind, this.#onFailBind)
         }catch(err){
             this.#onFail(e)
         }
@@ -53,7 +55,7 @@ class MyPromise{
         this.#runCallBacks()
     }
     catch(callbackCode){
-
+        this.then(undefined,callbackCode)
     }
     finally(callbackCode){
 
