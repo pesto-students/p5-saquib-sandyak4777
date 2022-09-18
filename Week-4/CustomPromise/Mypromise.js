@@ -47,8 +47,14 @@ class MyPromise{
 
     then(callbackCode){
         this.#thenCallBacks.push(callbackCode)
-        
+
         this.#runCallBacks()
+    }
+    catch(callbackCode){
+
+    }
+    finally(callbackCode){
+        
     }
 }
 
