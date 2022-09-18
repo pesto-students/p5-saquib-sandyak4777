@@ -35,7 +35,8 @@ class MyPromise{
     }
 
     #onSuccess(value){
-        if(this.#state !== STATE.PENDING) return
+        queueMicrotask(()=>{
+            if(this.#state !== STATE.PENDING) return
 
         if(value instanceof MyPromise){
             value.then(this.#onSuccessBind,this.#onFailBind)
@@ -44,18 +45,21 @@ class MyPromise{
         this.#value=value;
         this.#state=STATE.FULFILLED
         this.#runCallBacks()
+        })
     }
     #onFail(value){
-        if(this.#state !== STATE.PENDING) return
+        queueMicrotask(()=>{
+            if(this.#state !== STATE.PENDING) return
 
         if(value instanceof MyPromise){
             value.then(this.#onSuccessBind,this.#onFailBind)
             return
         }
-        
+
         this.#value=value;
         this.#state=STATE.REJECTED
         this.#runCallBacks()
+        })
     }
 
     then(thenCallBack,catchCallBack){
