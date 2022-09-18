@@ -22,11 +22,13 @@ class MyPromise{
             this.#thenCallBacks.forEach((callback)=>{
                 callback(this.#value)
             })
+            this.#thenCallBacks=[]
         }
         if(this.#state === STATE.REJECTED){
             this.#catchCallBacks.forEach((callback)=>{
                 callback(this.#value)
             })
+            this.#catchCallBacks=[]
         }
     }
 
@@ -45,6 +47,8 @@ class MyPromise{
 
     then(callbackCode){
         this.#thenCallBacks.push(callbackCode)
+        
+        this.#runCallBacks()
     }
 }
 
