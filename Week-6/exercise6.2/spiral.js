@@ -12,6 +12,7 @@ const spiralArray = (array) =>{
     let right =array[0].length-1;
     let bottom= array.length-1;
     let direction='right';
+    
     return array
 }
 
