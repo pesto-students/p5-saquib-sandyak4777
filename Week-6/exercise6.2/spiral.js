@@ -19,15 +19,31 @@ const spiralArray = (array) =>{
                 result.push(array[top][i]);
             }
             direction="down";
-            top=+1;
+            top+=1;
         }else if(direction==="down"){
             for(i=top;i<=bottom;i++){
                 result.push(array[i][right])
             }
+            direction="left";
+            right-=1;
+        }else if(direction==="left"){
+            for(i=right;i>=left;i--){
+                result.push(array[bottom][i])
+            }
+            direction="up";
+            bottom-=1;
+        } else if(direction=="up"){
+            for(i=bottom;i>=top ;i--){
+                result.push(array[i][left])
+            }
+            left+=1
+            direction="right"
         }
     }
     return result
 }
 
 
-console.log(spiralArray(array));
+const spiralArrayResult = spiralArray(array);
+
+console.log('spira;ArrayResult',spiralArrayResult)
