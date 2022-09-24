@@ -9,11 +9,14 @@ const spiralArray = (array) =>{
     let left=0;
     let top=0;
     const result = [];
-    let right =array[0].length-1;
-    let bottom= array.length-1;
+    let right =array[0].length-1;//3
+    let bottom= array.length-1;//3
     let direction='right';
-    
-    return array
+
+    while(left<=right && top<=bottom){
+        
+    }
+    return result
 }
 
 
