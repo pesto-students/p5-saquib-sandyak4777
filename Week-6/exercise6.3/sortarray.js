@@ -21,3 +21,7 @@ const len = array.length;
 const Result = sortByFunction(len, array);
 
 console.log("array is sorted", Result);
+
+//here time complexity o(n^2);
+//and space complexity is 0(n)
+// since this is not efficient will do sorting by other methods
