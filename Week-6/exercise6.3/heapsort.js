@@ -41,3 +41,7 @@ const arr = [0,0,1,2,2,2,2,1,1,1,1,0,0,0,0,0,1,2,1,3,4,2,1,3,4,0,1,2];
 sortedArr = heapSort(arr);
 
 console.log("Sorted array is \n", sortedArr)
+
+// this has time complexity o(nlogn)
+// where n is given as 10^6 so  o(10^6 log10^6)===> o(10^6)=> nothing but 0(n)
+// where space complexity is o(1)
