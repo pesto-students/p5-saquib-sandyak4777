@@ -7,7 +7,7 @@ const getNumber = () =>{
     return randomNum
 }
 
-const P= new customPromise((resolve,reject)=>{
+const customPromiseUsed= new customPromise((resolve,reject)=>{
     const num=getNumber();
     if(num%5===0){
                 reject(`The number is failure ${num}`)
@@ -16,7 +16,7 @@ const P= new customPromise((resolve,reject)=>{
     }
 })
 
-P.then((result)=>{
+customPromiseUsed.then((result)=>{
     console.log('success',result)
 }).catch((err)=>{
     console.log(err)
