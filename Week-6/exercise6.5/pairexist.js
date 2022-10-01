@@ -9,7 +9,7 @@ const checkIfPairExist = (arr, valueTobeChecked) => {
     let j = i;
     while (j <= arr.length - 1) {
       if (a[i] - a[j] == valueTobeChecked) {
-        console.log("pair of values",a[i],a[j])
+        console.log("pair of values",arr[i],arr[j]);
         return 1;
       }
       j++;
