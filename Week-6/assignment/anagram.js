@@ -11,7 +11,6 @@ function anagrams(stringA, stringB) {
   for (let char of stringA) {
     if (!arrB.includes(char)) {
       return false;
-      break;
     } else {
       arrB.splice(arrB.indexOf(char), 1);
     }
