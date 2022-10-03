@@ -1,0 +1,19 @@
+{
+  "name": "p5-saquib-sandyak4777",
+  "version": "1.0.0",
+  "description": "my learnings and assignment",
+  "main": "heapsort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/p5-saquib-sandyak4777.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/p5-saquib-sandyak4777/issues"
+  },
+  "homepage": "https://github.com/pesto-students/p5-saquib-sandyak4777#readme"
+}
