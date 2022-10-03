@@ -16,13 +16,12 @@ b.next = c;
 c.next = d;
 d.next = e;
 
-
-const printLinkedListElement = (head) =>{
-    const current=head;
-    while(current!== null){
-        console.log("values",head.val);
-        current=current.next;
-    }
-}
+const printLinkedListElement = (head) => {
+  let current = head;
+  while (current !== null) {
+    console.log("values", current.value);
+    current = current.next;
+  }
+};
 
 printLinkedListElement(a);
