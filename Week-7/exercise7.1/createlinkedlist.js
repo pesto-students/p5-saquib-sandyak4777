@@ -5,11 +5,11 @@ class Node {
   }
 }
 
-const a = Node("A");
-const b = Node("B");
-const c = Node("C");
-const d = Node("D");
-const e = Node("E");
+const a = new Node("A");
+const b = new Node("B");
+const c = new Node("C");
+const d = new Node("D");
+const e = new Node("E");
 
 a.next = b;
 b.next = c;
@@ -20,7 +20,8 @@ d.next = e;
 const printLinkedListElement = (head) =>{
     const current=head;
     while(current!== null){
-
+        console.log("values",head.val);
+        current=current.next;
     }
 }
 
