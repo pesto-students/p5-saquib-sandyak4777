@@ -1,5 +1,5 @@
 // const myIterable = {};
-const fib = (num) => {
+const fiboni = (num) => ({
   [Symbol.iterator]: () => {
     let i = 1;
     let old = 0,
@@ -14,12 +14,13 @@ const fib = (num) => {
         }
       },
     };
-  };
-};
+  },
+});
 
+console.log("series", [...fiboni(8)]);
+//below are different methods to execute
 // const series = [...fiboni(8)];
-// console.log("series", [...fiboni(8)]);
-console.log("The Fibonacci Series is ");
-for (let num of fib(9)) {
-  console.log(num);
-}
+// console.log("The Fibonacci Series is ");
+// for (let num of fiboni(9)) {
+//   console.log(num);
+// }
