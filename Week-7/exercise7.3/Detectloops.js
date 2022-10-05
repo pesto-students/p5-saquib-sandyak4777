@@ -28,6 +28,7 @@ function detectLoop() {
         return true;
       }
     }
+    return false;
   }
 
   //can use method 1
