@@ -23,6 +23,8 @@ function detectLoop() {
       tortoisePointer = tortoisePointer.next;
       rabitPointer = rabitPointer.next.next;
       if (tortoisePointer == rabitPointer) {
+        //console log below gives which has two pointers to its memory address location
+        //console.log("value",rabitPointer.data)
         return true;
       }
     }
